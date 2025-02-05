@@ -26,8 +26,10 @@ declare global {
 
 import { ReactNode } from "react";
 import { ErrorInfo } from "./client";
+import { ImportMap } from "./server";
 
 export interface PrerenderOptions {
+    importMap?: ImportMap;
     bootstrapScriptContent?: string;
     bootstrapScripts?: string[];
     bootstrapModules?: string[];
