@@ -24,7 +24,19 @@ declare global {
 import { ReactNode } from "react";
 import { ErrorInfo } from "./client";
 
+export type ImportMap = {
+  imports?: {
+    [specifier: string]: string,
+  },
+  scopes?: {
+    [scope: string]: {
+      [specifier: string]: string,
+    },
+  },
+};
+
 export interface RenderToPipeableStreamOptions {
+    importMap?: ImportMap;
     identifierPrefix?: string;
     namespaceURI?: string;
     nonce?: string;
